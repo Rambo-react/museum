@@ -1,0 +1,101 @@
+// /* SLIDER*/
+.explore-slider {
+    width: 720px;
+    height: 700px;
+    position: relative;
+    margin-top: 15px;
+    @include media-tablet-big {
+        margin: 62px auto 0px;
+    }
+    @include media-mobile {
+        max-width: 380px;
+        max-height: 368px;
+    }
+}
+
+.img-comp-container {
+    position: relative;
+}
+
+.img-comp-img {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    & img {
+        display: block;
+        @include media-mobile {
+            max-width: 380px;
+            max-height: 368px;
+        }
+    }
+}
+
+// .img-comp-overlay {
+//     // width: 720px;
+
+// }
+
+
+
+.img-comp-slider {
+    position: absolute;
+    cursor: ew-resize;
+    width: 32px;
+    height: 32px;
+    border: white 4px solid;
+    border-radius: 50%;
+    z-index: 9;
+    @include media-mobile {
+        width: 16px;
+        height: 16px;     
+        border: white 2px solid;
+    }
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 2px);
+        width: 4px;
+        height: calc((700px / 2) - 15px);
+        background-color: #fff;
+        z-index: 9;
+        @include media-mobile {
+            left: calc(50% - 1px);
+            width: 2px;
+            height: calc((380px / 2) - 13px);
+        }
+    }
+    &::before {
+        bottom: 27px;
+        @include media-mobile {
+            bottom: 13px;
+        }
+    }
+    &::after {
+        top: 27px;
+        @include media-mobile {
+            top: 13px;
+        }
+    }
+}
+
+// .img-comp-slider::before {
+//     content: '';
+//     position: absolute;
+//     left: calc(50% - 2px);
+//     bottom: 27px;
+//     width: 4px;
+//     height: calc((720px / 2) - 25px);
+//     background-color: #fff;
+//     z-index: 9;
+// }
+
+// .img-comp-slider::after {
+//     content: '';
+//     position: absolute;
+//     left: calc(50% - 2px);
+//     top: 27px;
+//     width: 4px;
+//     height: calc((720px / 2) - 25px);
+//     background-color: #fff;
+//     z-index: 9;
+// }

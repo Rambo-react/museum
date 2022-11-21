@@ -1,0 +1,71 @@
+.booking-tickets {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(212, 212, 212, 0.5);
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:98;
+    @extend %transition;
+    &_hidden {
+        z-index:-1;
+        // display: none;
+        background: rgb(212, 212, 212, 0);
+    }
+    @include media-tablet {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+
+.booking-tickets__container {
+    position: relative;
+    padding: 91px 235px;
+    background: $color-white;
+    opacity: 1;
+    @extend %transition;
+    &_hidden {
+        opacity: 0;
+    }
+    @include media-tablet-big {
+        padding: 75px 27px 30px;
+    }
+    @include media-tablet {
+        padding: 80px 30px 40px;
+    }
+    @include media-mobile {
+        padding: 80px 30px 50px;
+    }
+}
+
+.close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-mask-image: url("../assets/svg/booking-tickets/close.svg");
+    -webkit-mask-size: cover;
+    background-repeat: no-repeat;
+    background-color: $color-bg-dark;
+    top: 30px;
+    right: 30px;
+    z-index: 99;
+    transition: 0.5s;
+    &:hover {
+        background-color: $color-dark-red;
+    }
+    @include media-tablet-big {
+        right: 27px;
+    }
+    @include media-tablet {
+        right: 30px;
+    }
+}
+

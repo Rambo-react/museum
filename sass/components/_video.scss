@@ -1,0 +1,13 @@
+.video__text {
+    @extend %font-primary;
+    @include font(2.2rem, 3.8rem, 300);
+    @include media-tablet-big {
+        display: none;
+    }
+}
+
+.video__columns {
+    @include media-tablet-big {
+        display: block;
+    }
+}

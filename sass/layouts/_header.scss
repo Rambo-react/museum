@@ -1,0 +1,30 @@
+.header {
+    background-color: $color-bg-dark;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 61px;
+    padding-bottom: 58px;
+
+    @include media-tablet-big {
+        padding-top: 51px;
+        padding-bottom: 48px;
+    }
+    @include media-tablet {
+        padding-top: 41px;
+        padding-bottom: 38px;
+    }
+    @include media-mobile {
+        padding-top: 31px;
+        padding-bottom: 28px;
+    }
+
+}
+
+// $content-width: 1440px;
+// $tablet-big-width: 1024px;
+// $tablet-width: 768px;
+// $mobile-width: 420px

@@ -1,0 +1,30 @@
+.visiting__title {
+    margin-bottom: 103px;
+    @include media-tablet-big {
+        margin-bottom: 83px;
+    }
+    @include media-tablet {
+        margin-bottom: 63px;
+    }
+}
+
+.visiting__columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 75px 0px;
+    @include media-tablet-big {
+        justify-content: center;
+        gap: 60px 108px;
+    }
+    @include media-tablet {
+        justify-content: center;
+        gap: 40px 56px;
+    }
+    @include media-mobile {
+        flex-direction: column;
+        row-gap: 40px 0px;
+        align-items: center;
+    }
+
+}

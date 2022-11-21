@@ -1,0 +1,26 @@
+.social {
+    margin-bottom: 5px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    >* {
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include media-mobile {
+            margin-right: 5px;
+        }
+    }
+    @include media-tablet-big {
+        margin-bottom: 0px;
+    }
+    @include media-tablet {
+        justify-content: normal;
+        margin-top: 42px;
+        margin-bottom: 0px;
+    }
+    @include media-mobile {
+        justify-content: center;
+    }
+}

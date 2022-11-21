@@ -1,0 +1,129 @@
+.tickets__title {
+    margin-bottom: 103px;
+    @include media-tablet-big {
+        margin-bottom: 83px;
+    }
+    @include media-tablet {
+        margin-bottom: 63px;
+    }
+}
+
+.tickets__columns {
+    justify-content: flex-start;
+    @include media-mobile {
+        display: block;
+    }
+}
+
+.tickets__content {
+    padding-left: 60px;
+    .column:nth-child(1) {
+        max-width: 270px;
+        @include media-tablet-big {
+            display: none;
+        }
+    }
+    .column:nth-child(2) {
+        max-width: 150px;
+        h4 {
+            text-align: right;
+            @include media-tablet-big {
+                text-align: left;
+            }
+            @include media-mobile {
+                text-align: center;
+            }
+        }
+        @include media-tablet-big {
+            max-width: 175px;
+        }
+        @include media-mobile {
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+    @include media-tablet-big {
+        flex-basis: auto;
+        padding-left: 80px;
+    }
+    @include media-tablet {
+        padding-left: 60px;
+    }
+    @include media-mobile {
+        padding-left: 0px;
+        margin: 0 auto;
+        width: 175px;
+    }
+}
+
+.tickets__control-text {
+    @extend %font-primary;
+    @include font(2.2rem, 2.6rem, 300);
+    margin: 10px 0 15px;
+    &:first-of-type {
+        margin: 25px 0 15px;
+        @include media-tablet-big {
+            margin: 29px 0 10px;
+        }
+        @include media-tablet {
+            margin: 39px 0 10px;
+        }
+        @include media-mobile {
+            margin: 20px 0 15px;
+        }
+    }
+    @include media-tablet-big {
+        margin: 29px 0 10px;
+    }
+    @include media-tablet {
+        margin: 25px 0 10px;
+    }
+    @include media-mobile {
+        margin: 20px 0 15px;
+        @include font(1.6rem, 1.9rem, 300);
+    }
+}
+
+
+.tickets__total {
+    margin-top: 50px;
+    @include media-tablet-big {
+        margin-top: 25px;
+    }
+    @include media-tablet {
+        margin-top: 39px;
+    }
+    @include media-tablet {
+        margin-top: 40px;
+    }
+}
+
+.tickets__img {
+    display: block;
+    width: 720px;
+    height: 550px;
+    background-image: url("../assets/img/buy-tickets/image.jpg");
+    @include media-tablet-big {
+        flex-basis: auto;
+        width: 700px;
+        height: 440px;
+        background-image: url("../assets/img/buy-tickets/image_1024.jpg");
+    }
+    @include media-tablet {
+        width: 444px; 
+        height: 340px;
+        background-image: url("../assets/img/buy-tickets/image_768.jpg");
+    }
+    @include media-mobile {
+        width:380px; 
+        height: 160px;
+        background-image: url("../assets/img/buy-tickets/image_420.jpg");
+    }
+}
+
+
+.tickets__content-columns {
+    @include media-tablet-big {
+        display: block;
+    }
+}

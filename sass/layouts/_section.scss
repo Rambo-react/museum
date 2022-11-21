@@ -1,0 +1,13 @@
+.section {
+    padding: 75px 0;
+    @include media-tablet-big {
+        padding: 60px 0;
+    }
+    @include media-tablet {
+        padding: 40px 0;
+    }
+}
+
+.section_dark {
+    background-color: $color-bg-dark;
+}

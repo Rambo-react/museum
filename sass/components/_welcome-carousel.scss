@@ -1,0 +1,159 @@
+.welcome-slider-carousel {
+    width: 1000px;
+    position:relative;
+    margin-left: auto;
+    margin-right: 0;
+    padding-bottom: 60px;
+    overflow: hidden;
+    @include media-tablet-big {
+        width: 700px;
+    }
+    @include media-tablet {
+        width: 728px;
+        padding-bottom: 0px;
+    }
+    @include media-mobile {
+        width: 380px;
+    }
+}
+
+.welcome-slider-container {
+    background:linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+    @include media-tablet {
+       background: transparent;
+    }
+}
+
+.welcome-slider-line-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    @extend %transition;
+    z-index: -1;
+}
+
+.welcome-slider-line-container-img {
+    @extend %user-select-none;
+    img {
+        @include media-tablet-big {
+            width: 700px;
+        }
+        @include media-tablet {
+            width: 728px;
+        }
+        @include media-mobile {
+            width: 380px;
+        }
+    }
+}
+
+
+//PAGINATION
+
+.welcome-pagination-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: $color-bg-dark;
+    color: $color-white;
+    @extend %user-select-none;
+    @include media-tablet {
+        position: relative;
+        justify-content: center;
+    }
+}
+
+//NUM SLIDER
+
+.welcome-slide-num {
+    margin-left: 75px;
+    padding: 40px 0;
+    width: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend %font-primary;
+    @include font(2.2rem, 4rem, 400, 0px);
+
+    @include media-tablet-big {
+        @include font(2rem, 4rem, 400, 0px);
+        margin-left: 203px;
+    }
+    @include media-tablet {
+        padding: 30px 0;
+        margin-left: 0px;
+    }
+    @include media-mobile {
+        @include font(1.6rem, 4rem, 400, 0px);
+        padding: 20px 0;
+    }
+}
+
+//RECTANGLES SLIDER
+
+.welcome-slider-pagination-container {
+    margin: 0 60px 0 55px;
+    display: flex;
+    justify-content: space-between;
+    @include media-tablet-big {
+        margin: 0 45px 0 45px;
+    }
+    @include media-tablet {
+        margin: 0 30px 0 30px;
+    }
+    @include media-mobile {
+        margin: 0 25px 0 25px;
+    }
+}
+
+.welcome-slider-pagination {
+    margin-right: 25px;
+    width: 16px;
+    height: 16px;
+    background: $color-white;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+    &.active {
+        background: $color-pagination-active;
+    }
+    &:hover {
+        background: $color-font-hover;                                     
+    }
+
+    @include media-mobile {
+        width: 7px;
+        height: 7px;
+        margin-right: 10px;
+    }
+}
+
+//ARROWS SLIDER
+
+.welcome-slider-control-container {
+    margin-right: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-tablet {
+        margin-right: 0px;
+    }
+}
+
+.welcome-slider-control {
+    @include font(2.8rem, 2.8rem, 400, 0px);
+    @extend %font-additional;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        color: $color-font-hover;
+    }
+}
+
+.welcome-slider-control[data-slide=prev] {
+    margin-right: 20px;
+}

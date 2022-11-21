@@ -1,0 +1,87 @@
+.welcome__button {
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.button-link{
+    display: inline-block;
+    color: $color-white;
+    @include font(2.2rem, 2.6rem, 300, 2px);
+    @extend %font-primary;
+    text-decoration: none;  
+    border-radius: 2px;
+    background: $color-black;
+    @extend %transition;
+    cursor: pointer;
+    &:hover {
+        background: $color-bg-button-hover;
+    }
+    &_colored {
+        background: $color-dark-red;
+        &:hover {
+        color: $color-white;
+        background: $color-bg-button-hover;
+        }  
+    }
+    @include media-tablet-big {
+        @include font(2rem, 2.3rem, 300, 2px);
+    }
+}
+
+.welcome__button-link {
+    border-radius: 10px;
+    padding: 0 64px;
+    @include media-tablet-big {
+        padding: 0 45px;
+    }
+    span {
+        line-height: 75px;
+        @include media-tablet-big {
+            line-height: 60px;
+        }
+    }
+}
+
+// BUY NOW
+
+.tickets__button {
+    margin-top: 52px;
+    width: 175px;
+    margin-left: auto;
+    @include media-tablet-big {
+        margin-top: 69px;
+    }
+    @include media-tablet {
+        margin-top: 40px;
+    }
+    @include media-mobile {
+        margin-left: 0px;
+    }
+}
+
+.tickets__button-book {
+    display: block;
+    margin-left: auto;
+    width: 220px;
+    height: 45px;
+    @extend %font-primary;
+    @include font(2.2rem, 2.6rem, 400);
+    border: none;
+    color: $color-white;
+    background: $color-dark-red;
+    @extend %transition;
+    cursor: pointer;
+    &:hover {
+        background: $color-bg-button-hover;
+    }
+}
+
+.tickets__button-link {
+    display: block;
+    border-radius: 2px;
+    text-align: center;
+    span {
+        line-height: 50px;
+    }
+}

@@ -1,0 +1,7 @@
+.layout-3-column {
+    @include columns($wrap: wrap);
+}
+
+.layout-2-column {
+    @include columns($width: 50%);
+}

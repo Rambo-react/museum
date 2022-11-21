@@ -1,0 +1,51 @@
+// TICKET TYPE RADIO GROUP 
+
+.checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgb(0, 0, 0);
+        display: none;
+    }
+
+}
+
+.tickets__radio {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-top: 25px;
+    cursor: pointer;
+    @extend %font-primary;
+    @include font(2.2rem, 2.6rem, 300);
+    @extend %user-select-none;
+    & input {
+       position: absolute;
+       opacity: 0;
+       cursor: pointer;
+       &:checked ~ .checkmark:after {
+            display: block;
+       }
+    }
+    &:hover {
+        text-decoration: underline;
+        .checkmark {
+            background-color: #eeeeee;
+        }
+    }
+    &:first-of-type {
+        margin-top: 50px;
+    }
+}

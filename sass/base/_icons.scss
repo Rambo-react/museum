@@ -1,0 +1,44 @@
+.ico {
+    cursor: pointer;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-block {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #666666;
+    @extend %flex-center;
+    filter: drop-shadow(0px 0px 0px #666666);
+    border-radius: 50px;
+    &:hover {
+        border-color: #999999;
+    }
+}
+
+.ico-youtube {
+    width:23px;
+    height:16px;
+    background-image: url("../assets/svg/socials/youtube.svg");
+}
+.ico-instagram {
+    width:21px;
+    height:20px;
+    background-image: url("../assets/svg/socials/instagram.svg");
+}
+.ico-facebook {
+    width:13px;
+    height:20px;
+    background-image: url("../assets/svg/socials/facebook.svg");
+}
+.ico-twitter {
+    width:20px;
+    height:17px;
+    background-image: url("../assets/svg/socials/twitter.svg");
+}
+.ico-pinterest {
+    width:20px;
+    height:20px;
+    background-image: url("../assets/svg/socials/pinterest.svg");
+}

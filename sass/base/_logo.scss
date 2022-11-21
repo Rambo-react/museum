@@ -1,0 +1,34 @@
+.logo {
+    display: flex;
+    @extend %font-additional;
+    @include font(2.8rem, 3.1rem, 400, 5px);
+    color: $color-white;
+    text-transform: uppercase;    
+    @include media-mobile {
+        @include font(1.6rem, 1.8rem, 400, 5px);
+    }
+}
+
+.logo-ico {
+    width: 49px;
+    height: 26px;
+    -webkit-mask-image:url("../assets/svg/logo.svg");
+    -webkit-mask-size: cover;
+    background-repeat: no-repeat;
+    background-color: $color-white;
+    @include media-mobile {
+        width: 29px;
+        height: 16px;
+    }
+}
+
+.logo-name {
+    margin-left: 25px;
+}
+
+.booking-tickets__logo-ico {
+    width: 85px;
+    height: 41px;
+    -webkit-mask-image: url("../assets/svg/logo_colored.svg");
+    background-color: $color-font-hover;
+}

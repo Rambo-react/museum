@@ -1,0 +1,100 @@
+//VIDEO SLIDER
+.video-slider-carousel {
+    margin-top: 40px;
+    iframe {
+        width: 420px;
+        height: 236px;
+        @include media-tablet-big {
+            width: 268px;
+            height: 152px;
+        }
+        @include media-tablet {
+            width: 350px;
+            height: 197px;
+        }
+        @include media-mobile {
+            width: 180px;
+            height: 101px;
+        }
+    }
+    @include media-tablet {
+        margin-top: 20px;
+    }
+    @include media-mobile {
+        margin-top: 40px;
+    }
+}
+
+.video-slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-slider-line-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    transition: all ease 0.5s;
+}
+
+.video-slider-line-container-img {
+    font-size: 0;
+    @extend %user-select-none;
+    cursor: pointer;
+}
+
+//VIDEO PAGINATION CONTAINER
+
+.video-slider-pagination-container {
+    margin-top: 40px;
+    @extend %flex-center;
+    >* {
+        margin-right: 20px;
+        background-color: #999999;
+        @extend %transition;
+        &:hover {
+        cursor:pointer;
+        background-color: $color-dark-red;
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    @include media-tablet {
+        margin-top: 20px;
+    }
+    @include media-mobile {
+        margin-top: 40px;
+    }
+}
+
+//PAGINATION RECTANGLES
+
+.video-slider-pagination {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    &.active {
+        background-color: #333333;
+    }
+    @include media-tablet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+//ARROWS
+
+.video-slider-control {
+    width: 10px;
+    height: 12px;
+    -webkit-mask-size: cover;
+    &[data-slide=prev] {
+        -webkit-mask-image: url("../assets/svg/video-slider/left.svg");
+    }
+    &[data-slide=next] {
+        -webkit-mask-image: url("../assets/svg/video-slider/right.svg");
+    }
+}

@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth; /*для плавной прокрутки по якорям*/
+} 
+
+body, div, section, h1, h2, h3, h4, p {
+    margin: 0; 
+}
+
+body {
+    font-size: 2.2rem;
+}
+
+h1 {
+    @extend %font-additional;
+    @include font(8.0rem, 9rem, 400, 0.5rem);
+    text-transform: uppercase;
+    color: $color-white;
+}
+
+h2 {
+    @extend %font-additional;
+    @include font(8.0rem, 9rem, 400, 0.5rem);
+    text-transform: uppercase;
+    color: $color-white;
+    @include media-tablet-big {
+        @include font(5rem, 7.5rem, 400, 0.5rem);
+    }
+    @include media-tablet {
+        @include font(4rem, 6rem, 400, 0.5rem);
+    }
+    @include media-mobile {
+        @include font(2.8rem, 4rem, 400, 0.5rem);
+    }
+}
+
+h3 {
+    @extend %font-additional;
+    @include font(3.2rem, 3.5rem, 400, 0.5rem);
+    text-transform: uppercase;
+    color: $color-black;
+    @include media-tablet-big {
+        @include font(2.8rem, 3.1rem, 400, 0.3rem);
+    }
+    @include media-tablet {
+        @include font(2.2rem, 2.4rem, 400, 0.3rem);
+    }
+    @include media-mobile {
+        @include font(1.8rem, 2rem, 400, 0.5rem);
+    }
+}
+
+
+h4 {
+    @extend %font-primary;
+    @include font(2.8rem, 3.3rem, 700);
+    color: $color-black;
+    @include media-mobile {
+        @include font(1.6rem, 1.9rem, 700);
+    }
+}
+
+.title_colored {
+    color: $color-font-hover;
+}
+
+.title_underline {
+    position: relative;
+    &::after {
+        @include underline($bottom: -25px, $height:3px);
+        @include media-tablet-big {
+            @include underline($bottom: -20px, $height:3px);
+        }
+    }
+}
+
+ul, button {
+    margin: 0;
+    padding: 0;
+}

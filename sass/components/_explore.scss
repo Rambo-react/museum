@@ -1,0 +1,46 @@
+.explore__content {
+    padding-right: 60px;
+    @include media-tablet-big {
+        padding-right: 0px;
+    }
+}
+
+.explore__text {
+    margin-top: 25px;
+    @extend %font-primary;
+    @include font(2.2rem, 3.8rem, 300);
+    color: $color-white;
+    &:nth-child(2) {
+        margin-top: 103px;
+        @include media-tablet-big {
+            margin-top: 83px;
+        }
+    }
+    & span {
+        color:$color-word;
+    }
+    @include media-tablet-big {
+        @include font(2rem, 3.8rem, 300);
+        margin-top: 0;
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+    @include media-tablet {
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+
+.explore__columns {
+    @include media-tablet-big {
+        display: block;
+    }
+}
